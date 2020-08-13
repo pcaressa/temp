@@ -101,9 +101,10 @@ boolean_expressions = ["true and false xor true",
                        "false xor false and false"
 ]
 for b in boolean_expressions:
+    s = b.split()
     print("Dealing with ", end = "")
-    print_token_list(b.split())
+    print_token_list(s)
     print()
-    for token_list in find_true(b.split()):
+    for token_list in find_true(s):
         print_token_list(token_list)
         print()
